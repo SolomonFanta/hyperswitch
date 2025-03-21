@@ -1,7 +1,8 @@
 use std::collections::{HashMap, HashSet};
 
 use common_enums::{AuthenticationConnectors, UIWidgetFormLayout};
-use common_utils::{encryption::Encryption, pii, types::AlwaysRequestExtendedAuthorization};
+use common_types::primitive_wrappers::AlwaysRequestExtendedAuthorization;
+use common_utils::{encryption::Encryption, pii};
 use diesel::{AsChangeset, Identifiable, Insertable, Queryable, Selectable};
 use masking::Secret;
 
@@ -355,7 +356,7 @@ pub struct Profile {
     pub three_ds_decision_manager_config: Option<common_types::payments::DecisionManagerRecord>,
     pub should_collect_cvv_during_payment: bool,
     pub id: common_utils::id_type::ProfileId,
-    pub merchant_business_country: Option<storage_enums::CountryAlpha2>,
+    pub merchant_business_country: Option<common_enums::CountryAlpha2>,
 }
 
 impl Profile {
@@ -422,7 +423,7 @@ pub struct ProfileNew {
     pub card_testing_secret_key: Option<Encryption>,
     pub is_clear_pan_retries_enabled: Option<bool>,
     pub is_debit_routing_enabled: bool,
-    pub merchant_business_country: Option<storage_enums::CountryAlpha2>,
+    pub merchant_business_country: Option<common_enums::CountryAlpha2>,
 }
 
 #[cfg(feature = "v2")]
@@ -473,7 +474,7 @@ pub struct ProfileUpdateInternal {
     pub card_testing_secret_key: Option<Encryption>,
     pub is_clear_pan_retries_enabled: Option<bool>,
     pub is_debit_routing_enabled: bool,
-    pub merchant_business_country: Option<storage_enums::CountryAlpha2>,
+    pub merchant_business_country: Option<common_enums::CountryAlpha2>,
 }
 
 #[cfg(feature = "v2")]

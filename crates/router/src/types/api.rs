@@ -560,6 +560,7 @@ impl ConnectorData {
                 | enums::Connector::Gpayments
                 | enums::Connector::Threedsecureio
                 | enums::Connector::Taxjar => {
+			enums::Connector::Testconnection => Ok(ConnectorEnum::Old(Box::new(nnector::Testconnection))),
                     Err(report!(errors::ConnectorError::InvalidConnectorName)
                         .attach_printable(format!("invalid connector name: {connector_name}")))
                     .change_context(errors::ApiErrorResponse::InternalServerError)
@@ -654,6 +655,7 @@ impl TaxCalculateConnectorData {
     ) -> CustomResult<ConnectorEnum, errors::ApiErrorResponse> {
         match connector_name {
             enums::TaxConnectors::Taxjar => {
+			enums::Connector::Testconnection => Ok(ConnectorEnum::Old(Box::new(nnector::Testconnection))),
                 Ok(ConnectorEnum::Old(Box::new(connector::Taxjar::new())))
             }
         }

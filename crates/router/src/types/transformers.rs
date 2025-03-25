@@ -303,6 +303,7 @@ impl ForeignTryFrom<api_enums::Connector> for common_enums::RoutableConnectors {
             api_enums::Connector::Stax => Self::Stax,
             api_enums::Connector::Stripe => Self::Stripe,
             // api_enums::Connector::Taxjar => Self::Taxjar,
+			api_enums::Connector::Testconnection => Self::Testconnection,
             // api_enums::Connector::Thunes => Self::Thunes,
             api_enums::Connector::Trustpay => Self::Trustpay,
             api_enums::Connector::Tsys => Self::Tsys,
@@ -338,8 +339,10 @@ impl ForeignTryFrom<api_enums::Connector> for common_enums::RoutableConnectors {
                 })?
             }
             api_enums::Connector::Taxjar => {
+			api_enums::Connector::Testconnection => Self::Testconnection,
                 Err(common_utils::errors::ValidationError::InvalidValue {
                     message: "Taxjar is not a routable connector".to_string(),
+			api_enums::Connector::Testconnection => Self::Testconnection,
                 })?
             }
         })

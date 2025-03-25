@@ -49,6 +49,7 @@ pub use hyperswitch_connectors::connectors::{
     unified_authentication_service::UnifiedAuthenticationService, volt, volt::Volt, wellsfargo,
     wellsfargo::Wellsfargo, worldline, worldline::Worldline, worldpay, worldpay::Worldpay, xendit,
     xendit::Xendit, zen, zen::Zen, zsl, zsl::Zsl,
+, testconnection, testconnection::Testconnection,
 };
 
 #[cfg(feature = "dummy_connector")]

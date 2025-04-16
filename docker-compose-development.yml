@@ -60,13 +60,16 @@ services:
   ### Application services
   hyperswitch-server:
     build:
-      dockerfile_inline: |
-        FROM rust:latest
-        RUN apt-get update && \
-            apt-get install -y protobuf-compiler
-        RUN rustup component add rustfmt clippy  
-    command: cargo run --bin router -- -f ./config/docker_compose.toml
-    working_dir: /app
+      # dockerfile_inline: |
+      #   FROM rust:latest
+      #   RUN apt-get update && \
+      #       apt-get install -y protobuf-compiler
+      #   RUN rustup component add rustfmt clippy  
+      context: .
+      dockerfile: Dockerfile
+    # command: cargo run --bin router -- -f ./config/docker_compose.toml
+    command: ./router -f /local/config/docker_compose.toml
+    # working_dir: /app
     ports:
       - "8080:8080"
     networks:
@@ -316,8 +319,12 @@ services:
       - redisinsight_store:/db
 
   hyperswitch-control-center:
-    image: docker.juspay.io/juspaydotin/hyperswitch-control-center:latest
-    pull_policy: always
+    # image: docker.juspay.io/juspaydotin/hyperswitch-control-center:latest
+    image: hyperswitch-control-center-local
+    # pull_policy: always
+    # build:
+    #   context: ../hyperswitch-control-center
+      # dockerfile: Dockerfile
     networks:
       - router_net
     ports:

@@ -87,6 +87,7 @@ pub struct Connectors {
     pub stripe: ConnectorParamsWithFileUploadUrl,
     pub taxjar: ConnectorParams,
     pub testconnection: ConnectorParams,
+    pub testconnector: ConnectorParams,
     pub threedsecureio: ConnectorParams,
     pub thunes: ConnectorParams,
     pub trustpay: ConnectorParamsWithMoreUrls,

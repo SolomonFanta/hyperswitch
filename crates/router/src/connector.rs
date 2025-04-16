@@ -50,6 +50,7 @@ pub use hyperswitch_connectors::connectors::{
     wellsfargo::Wellsfargo, worldline, worldline::Worldline, worldpay, worldpay::Worldpay, xendit,
     xendit::Xendit, zen, zen::Zen, zsl, zsl::Zsl,
 , testconnection, testconnection::Testconnection,
+, testconnector, testconnector::Testconnector,
 };
 
 #[cfg(feature = "dummy_connector")]

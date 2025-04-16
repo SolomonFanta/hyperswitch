@@ -95,6 +95,7 @@ macro_rules! default_imp_for_authorize_session_token {
 }
 
 default_imp_for_authorize_session_token!(
+	connectors::Testconnector,
 	connectors::Testconnection,
     connectors::Aci,
     connectors::Airwallex,
@@ -178,6 +179,7 @@ macro_rules! default_imp_for_calculate_tax {
 }
 
 default_imp_for_calculate_tax!(
+	connectors::Testconnector,
 	connectors::Testconnection,
     connectors::Aci,
     connectors::Airwallex,
@@ -262,6 +264,7 @@ macro_rules! default_imp_for_session_update {
 }
 
 default_imp_for_session_update!(
+	connectors::Testconnector,
 	connectors::Testconnection,
     connectors::Aci,
     connectors::Airwallex,
@@ -347,6 +350,7 @@ macro_rules! default_imp_for_post_session_tokens {
 }
 
 default_imp_for_post_session_tokens!(
+	connectors::Testconnector,
 	connectors::Testconnection,
     connectors::Aci,
     connectors::Airwallex,
@@ -434,6 +438,7 @@ macro_rules! default_imp_for_complete_authorize {
 }
 
 default_imp_for_complete_authorize!(
+	connectors::Testconnector,
 	connectors::Testconnection,
     connectors::Aci,
     connectors::Amazonpay,
@@ -504,6 +509,7 @@ macro_rules! default_imp_for_incremental_authorization {
 }
 
 default_imp_for_incremental_authorization!(
+	connectors::Testconnector,
 	connectors::Testconnection,
     connectors::Aci,
     connectors::Airwallex,
@@ -588,6 +594,7 @@ macro_rules! default_imp_for_create_customer {
 }
 
 default_imp_for_create_customer!(
+	connectors::Testconnector,
 	connectors::Testconnection,
     connectors::Aci,
     connectors::Airwallex,
@@ -674,6 +681,7 @@ macro_rules! default_imp_for_connector_redirect_response {
 }
 
 default_imp_for_connector_redirect_response!(
+	connectors::Testconnector,
 	connectors::Testconnection,
     connectors::Aci,
     connectors::Amazonpay,
@@ -747,6 +755,7 @@ macro_rules! default_imp_for_pre_processing_steps{
 }
 
 default_imp_for_pre_processing_steps!(
+	connectors::Testconnector,
 	connectors::Testconnection,
     connectors::Aci,
     connectors::Amazonpay,
@@ -827,6 +836,7 @@ macro_rules! default_imp_for_post_processing_steps{
 }
 
 default_imp_for_post_processing_steps!(
+	connectors::Testconnector,
 	connectors::Testconnection,
     connectors::Aci,
     connectors::Airwallex,
@@ -913,6 +923,7 @@ macro_rules! default_imp_for_approve {
 }
 
 default_imp_for_approve!(
+	connectors::Testconnector,
 	connectors::Testconnection,
     connectors::Aci,
     connectors::Airwallex,
@@ -999,6 +1010,7 @@ macro_rules! default_imp_for_reject {
 }
 
 default_imp_for_reject!(
+	connectors::Testconnector,
 	connectors::Testconnection,
     connectors::Aci,
     connectors::Airwallex,
@@ -1085,6 +1097,7 @@ macro_rules! default_imp_for_webhook_source_verification {
 }
 
 default_imp_for_webhook_source_verification!(
+	connectors::Testconnector,
 	connectors::Testconnection,
     connectors::Aci,
     connectors::Airwallex,
@@ -1172,6 +1185,7 @@ macro_rules! default_imp_for_accept_dispute {
 }
 
 default_imp_for_accept_dispute!(
+	connectors::Testconnector,
 	connectors::Testconnection,
     connectors::Aci,
     connectors::Airwallex,
@@ -1258,6 +1272,7 @@ macro_rules! default_imp_for_submit_evidence {
 }
 
 default_imp_for_submit_evidence!(
+	connectors::Testconnector,
 	connectors::Testconnection,
     connectors::Aci,
     connectors::Airwallex,
@@ -1344,6 +1359,7 @@ macro_rules! default_imp_for_defend_dispute {
 }
 
 default_imp_for_defend_dispute!(
+	connectors::Testconnector,
 	connectors::Testconnection,
     connectors::Aci,
     connectors::Airwallex,
@@ -1439,6 +1455,7 @@ macro_rules! default_imp_for_file_upload {
 }
 
 default_imp_for_file_upload!(
+	connectors::Testconnector,
 	connectors::Testconnection,
     connectors::Aci,
     connectors::Airwallex,
@@ -1518,6 +1535,7 @@ macro_rules! default_imp_for_payouts {
 }
 
 default_imp_for_payouts!(
+	connectors::Testconnector,
 	connectors::Testconnection,
     connectors::Aci,
     connectors::Airwallex,
@@ -1604,6 +1622,7 @@ macro_rules! default_imp_for_payouts_create {
 
 #[cfg(feature = "payouts")]
 default_imp_for_payouts_create!(
+	connectors::Testconnector,
 	connectors::Testconnection,
     connectors::Aci,
     connectors::Airwallex,
@@ -1692,6 +1711,7 @@ macro_rules! default_imp_for_payouts_retrieve {
 
 #[cfg(feature = "payouts")]
 default_imp_for_payouts_retrieve!(
+	connectors::Testconnector,
 	connectors::Testconnection,
     connectors::Aci,
     connectors::Airwallex,
@@ -1780,6 +1800,7 @@ macro_rules! default_imp_for_payouts_eligibility {
 
 #[cfg(feature = "payouts")]
 default_imp_for_payouts_eligibility!(
+	connectors::Testconnector,
 	connectors::Testconnection,
     connectors::Aci,
     connectors::Airwallex,
@@ -1868,6 +1889,7 @@ macro_rules! default_imp_for_payouts_fulfill {
 
 #[cfg(feature = "payouts")]
 default_imp_for_payouts_fulfill!(
+	connectors::Testconnector,
 	connectors::Testconnection,
     connectors::Aci,
     connectors::Airwallex,
@@ -1955,6 +1977,7 @@ macro_rules! default_imp_for_payouts_cancel {
 
 #[cfg(feature = "payouts")]
 default_imp_for_payouts_cancel!(
+	connectors::Testconnector,
 	connectors::Testconnection,
     connectors::Aci,
     connectors::Airwallex,
@@ -2043,6 +2066,7 @@ macro_rules! default_imp_for_payouts_quote {
 
 #[cfg(feature = "payouts")]
 default_imp_for_payouts_quote!(
+	connectors::Testconnector,
 	connectors::Testconnection,
     connectors::Aci,
     connectors::Airwallex,
@@ -2131,6 +2155,7 @@ macro_rules! default_imp_for_payouts_recipient {
 
 #[cfg(feature = "payouts")]
 default_imp_for_payouts_recipient!(
+	connectors::Testconnector,
 	connectors::Testconnection,
     connectors::Aci,
     connectors::Airwallex,
@@ -2219,6 +2244,7 @@ macro_rules! default_imp_for_payouts_recipient_account {
 
 #[cfg(feature = "payouts")]
 default_imp_for_payouts_recipient_account!(
+	connectors::Testconnector,
 	connectors::Testconnection,
     connectors::Aci,
     connectors::Airwallex,
@@ -2307,6 +2333,7 @@ macro_rules! default_imp_for_frm_sale {
 
 #[cfg(feature = "frm")]
 default_imp_for_frm_sale!(
+	connectors::Testconnector,
 	connectors::Testconnection,
     connectors::Aci,
     connectors::Airwallex,
@@ -2395,6 +2422,7 @@ macro_rules! default_imp_for_frm_checkout {
 
 #[cfg(feature = "frm")]
 default_imp_for_frm_checkout!(
+	connectors::Testconnector,
 	connectors::Testconnection,
     connectors::Aci,
     connectors::Airwallex,
@@ -2483,6 +2511,7 @@ macro_rules! default_imp_for_frm_transaction {
 
 #[cfg(feature = "frm")]
 default_imp_for_frm_transaction!(
+	connectors::Testconnector,
 	connectors::Testconnection,
     connectors::Aci,
     connectors::Airwallex,
@@ -2571,6 +2600,7 @@ macro_rules! default_imp_for_frm_fulfillment {
 
 #[cfg(feature = "frm")]
 default_imp_for_frm_fulfillment!(
+	connectors::Testconnector,
 	connectors::Testconnection,
     connectors::Aci,
     connectors::Airwallex,
@@ -2659,6 +2689,7 @@ macro_rules! default_imp_for_frm_record_return {
 
 #[cfg(feature = "frm")]
 default_imp_for_frm_record_return!(
+	connectors::Testconnector,
 	connectors::Testconnection,
     connectors::Aci,
     connectors::Airwallex,
@@ -2744,6 +2775,7 @@ macro_rules! default_imp_for_revoking_mandates {
 }
 
 default_imp_for_revoking_mandates!(
+	connectors::Testconnector,
 	connectors::Testconnection,
     connectors::Aci,
     connectors::Airwallex,
@@ -2828,6 +2860,7 @@ macro_rules! default_imp_for_uas_pre_authentication {
 }
 
 default_imp_for_uas_pre_authentication!(
+	connectors::Testconnector,
 	connectors::Testconnection,
     connectors::Aci,
     connectors::Airwallex,
@@ -2912,6 +2945,7 @@ macro_rules! default_imp_for_uas_post_authentication {
 }
 
 default_imp_for_uas_post_authentication!(
+	connectors::Testconnector,
 	connectors::Testconnection,
     connectors::Aci,
     connectors::Airwallex,
@@ -2996,6 +3030,7 @@ macro_rules! default_imp_for_uas_authentication {
 }
 
 default_imp_for_uas_authentication!(
+	connectors::Testconnector,
 	connectors::Testconnection,
     connectors::Aci,
     connectors::Airwallex,

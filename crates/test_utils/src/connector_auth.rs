@@ -86,6 +86,7 @@ pub struct ConnectorAuthentication {
     pub stripe: Option<HeaderKey>,
     pub taxjar: Option<HeaderKey>,
     pub testconnection: Option<HeaderKey>,
+    pub testconnector: Option<HeaderKey>,
     pub threedsecureio: Option<HeaderKey>,
     pub thunes: Option<HeaderKey>,
     pub stripe_au: Option<HeaderKey>,

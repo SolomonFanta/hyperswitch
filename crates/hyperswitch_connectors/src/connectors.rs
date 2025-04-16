@@ -56,6 +56,7 @@ pub mod square;
 pub mod stax;
 pub mod taxjar;
 pub mod testconnection;
+pub mod testconnector;
 pub mod thunes;
 pub mod tsys;
 pub mod unified_authentication_service;
@@ -85,4 +86,5 @@ pub use self::{
     volt::Volt, wellsfargo::Wellsfargo, worldline::Worldline, worldpay::Worldpay, xendit::Xendit,
     zen::Zen, zsl::Zsl,
 , testconnection::Testconnection,
+, testconnector::Testconnector,
 };

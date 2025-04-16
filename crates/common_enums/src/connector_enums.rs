@@ -22,7 +22,7 @@ pub use super::enums::{PaymentMethod, PayoutType};
 #[strum(serialize_all = "snake_case")]
 /// RoutableConnectors are the subset of Connectors that are eligible for payments routing
 pub enum RoutableConnectors {
-    Testconnection,
+    Testconnector,
     Adyenplatform,
     #[cfg(feature = "dummy_connector")]
     #[serde(rename = "phonypay")]
@@ -275,6 +275,7 @@ pub enum Connector {
     Xendit,
     Zen,
     Zsl,
+    Testconnector,
 }
 
 impl Connector {
@@ -420,6 +421,7 @@ impl Connector {
             | Self::Netcetera
             | Self::CtpMastercard
             | Self::Noon
+            | Self::Testconnector
             | Self::Stripe => false,
             Self::Checkout | Self::Nmi |Self::Datatrans|Self::Cybersource => true,
         }
@@ -542,6 +544,7 @@ impl From<RoutableConnectors> for Connector {
             RoutableConnectors::Zsl => Self::Zsl,
             RoutableConnectors::Xendit => Self::Xendit,
             RoutableConnectors::Inespay => Self::Inespay,
+            RoutableConnectors::Testconnector => Self::Testconnector,
         }
     }
 }
